@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box; /* はみだし防止 */
+}
+
+body {
+  margin:  0;/* ブラウザがつける余白0 */
+  padding: 40px 20px; /* 内側の余白上下40px, 左右20px */
+  color: #333;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* タイトルと説明文 */
+h1 {
+  margin: 0 0 10px;
+  color: #061f54;
+}
+
+
+.lead {
+  color: #707070;
+  font-size: 14px;
+}
+
+.search {
+  display: flex;
+  justify-content: center; /* 横並びを、左右の真ん中に寄せる */
+  gap: 10px;
+  margin: 30px 0; /* 外の余白:上下30px・左右0 */
+}
+
+.word {
+  color: #1a56db;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.search input {
+  width: 260px;
+  padding: 12px;
+  border: 1px solid #cacaca;
+  font-size: 16px;  
+}
+
+.search button {
+  padding: 12px 24px;
+  border: none;
+  background-color: #1a56db;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+  /* ===== ④ 十字のマップ:たてに 上・まん中・下 ===== */
+  .map {
+    display: flex;
+    flex-direction: column; /*並べる向きをたてにする  */
+    align-items: center;
+    gap: 20px;
+  }
+ /* ===== ⑤ まん中の段:類語・言葉・関連語を横並び ===== */
+  .middle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  /*４つの箱を作る */
+  .box {
+    width: 220px; /* 横幅220px */
+    padding: 16px; /* 内側の余白16px */
+    border: 2px solid #1a56db;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+  .label {
+    margin: 0 0 6px; /* 余白の下だけ6px */
+    color: #1a56db;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .box p:last-child {
+    margin: 0;
+  }
+
+/* 真ん中の言葉の丸は大きく */
+.center {
+  width: 140px; /* 横幅 */
+  height: 140px;/* 縦幅 */
+  border-radius: 50%;/* 角丸　正方形が円になる */
+  background-color: #1a56db;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 140px; /* １行の高さを丸と同じにする */
+}
+
+.definition {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 30px;
+  padding-left: 12px;
+  border-left: 4px solid #ffd61a;
+}
+
+/* wikidataの説明 */
+.description {
+  max-width: 500px; /* 横に広がりすぎない */
+  font-size: 14px;  /* 文字の大きさ */
+  color: #333;      /* 文字の色(こいグレー) */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シソーラスマップ</title>
+    <link rel="stylesheet" href="stlye 01.css">
+</head>
+<body>
+    <h1>シソーラスマップ</h1>
+      <p class="lead">言葉を入れると上位語(上の概念)・下位語(具体例)・類語(似ている言葉)・関連語(関連がある言葉)を出します。
+      <br>今登録しているのは、犬、好き、仕事の三つです。</p>
+
+    <!--入力欄とボタン -->
+    <div class="search">
+        <input type="text" id="word" placeholder="例:犬">
+        <button onclick="showMap()">調べる</button>
+    </div>
+
+    <!-- シソーラスマップ（十字マップ） -->
+    <div class="map">
+        <div class="box top">
+            <p class="label">上位語</p>
+            <p id="upper">-</p>
+        </div>
+
+    <!-- 類義の作成 -->
+        <div class="middle">
+            <div class="box">
+                <p class="label">類語</p>
+                <p id="similar">-</p>
+            </div>
+        <!-- 関連語 -->
+        <div class="center" id="center">?</div>
+            <div class="box">
+                <p class="label">関連語</p>
+                <p id="related">-</p>
+            </div>
+        </div>
+
+        <div class="box bottom">
+            <p class="label">下位語</p>
+            <p id="lower">-</p>
+        </div>
+        
+    <p id="description" class="description">-</p>
+
+        <div>
+            <p class="definition">
+            <strong>シソーラス(Thesaurus)</strong>とは、似た意味を持つ言葉や関連する言葉を体系的にまとめた
+            <br>「類語辞典」や「データベース」です。</p>
+        </div>
+    </div>
+
+    <!-- 1. 先にjQuery本体を読みこむ -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- 2. そのあとに自分のJS -->
+    <script src="main.js"></script>
+    
+</body>
+</html>

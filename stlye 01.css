@@ -138,4 +138,6 @@ h1 {
 
 .dropzone1.hover {
   background-color: #ffd61a;
+  opacity: 0.6;
+  color: #333;
 }

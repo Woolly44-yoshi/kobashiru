@@ -9,7 +9,7 @@
 <body>
     <h1>シソーラスマップ</h1>
       <p class="lead">言葉を入れると上位語(上の概念)・下位語(具体例)・類語(似ている言葉)・関連語(関連がある言葉)を出します。
-      <br>今登録しているのは、犬、好き、仕事の三つです。</p>
+      <br>好きな言葉を自由に入れてください</p>
 
     <!--入力欄とボタン -->
     <div class="search">
@@ -21,14 +21,14 @@
     <div class="map">
         <div class="box top">
             <p class="label">上位語</p>
-            <p id="upper">-</p>
+            <p id="upper">-</p> <!-- ドラッグアンドドロップ -->
         </div>
 
     <!-- 類義の作成 -->
         <div class="middle">
             <div class="box">
                 <p class="label">類語</p>
-                <p id="similar">-</p>
+                <p id="similar" >-</p>
             </div>
         <!-- 関連語 -->
         <div class="center" id="center">?</div>
@@ -44,7 +44,19 @@
         </div>
         
     <p id="description" class="description">-</p>
+    <!-- ドロップする場所の追加 -->
+    <div class="dropzone">右に言葉をドロップ！</div>
 
+     <!-- リッチ課題！スライドモーダルの追加 -->
+    <button class="js-click-showSlideModal">お気に入り保存</button>
+    <div class="slide-modal js-target-slideModal">
+        <h2>お気に入り</h2>
+        <div id="dropzone" class="dropzone1">
+            <p>ここに言葉をドロップ</p>
+            <ul id="favorite-list" class="dropzone"></ul>
+        </div>
+    </div>
+    
         <div>
             <p class="definition">
             <strong>シソーラス(Thesaurus)</strong>とは、似た意味を持つ言葉や関連する言葉を体系的にまとめた
@@ -54,6 +66,7 @@
 
     <!-- 1. 先にjQuery本体を読みこむ -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <!-- 2. そのあとに自分のJS -->
     <script src="main.js"></script>
     

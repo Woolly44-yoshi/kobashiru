@@ -110,3 +110,32 @@ h1 {
   font-size: 14px;  /* 文字の大きさ */
   color: #333;      /* 文字の色(こいグレー) */
 }
+
+.slide-modal {
+  position: fixed; /* 画面に固定する */
+  top: 0; /* 上から0の場所で */
+  right: 0; /* 右から0の場所で */
+  border-left: 1px solid #1a56db;
+  width: 20%;
+  height: 100%;
+  padding: 20px;
+  background-color:#e8effc;
+  transform: translate(100%); /* 画面の100% 右にずらす */
+  transition: transform 0.3s;/* 0.3秒滑らかに動かす */
+  z-index: 10;
+}
+
+.js-target-slideModal.show{
+  transform: translate(0);
+}
+
+.dropzone1 {
+  min-height: 800px;
+  padding: 15px;  
+  border: dotted 2px #1a56db;
+  background-color: #fff;
+}
+
+.dropzone1.hover {
+  background-color: #ffd61a;
+}
